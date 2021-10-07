@@ -12,6 +12,7 @@ public class Tamagotchi {
         this.energy = 50;
     }
 
+    // Play method
     public void play(){
         System.out.println(this.name+" is playing!!!");
         this.energy -= 40;
@@ -28,7 +29,9 @@ public class Tamagotchi {
         }
     }
 
+    // Feed method
     public void feed(){
+        System.out.println(this.name+" is eating!!!");
         this.mood += 15;
         this.energy -= 20;
         // Truncate mood to 100
@@ -41,9 +44,12 @@ public class Tamagotchi {
         }
     }
 
+    // Sleep method
     public void sleep(){
+        System.out.println(this.name+" is sleeping!!!");
         this.energy += 40;
         this.mood -= 30;
+        this.age +=1;
         // Truncate mood to 0
         if(this.mood<=0){
             this.mood = 0;
@@ -64,6 +70,13 @@ public class Tamagotchi {
     public int getEnergy(){
         return this.energy;
     }
+    public int getAge(){
+        return this.age;
+    }
+
+    public String toString(){
+        return this.name + " - (mood="+this.mood+", energy="+this.energy+", age="+this.age+")";
+    }
 
     // Setters
     public void setMood(int mood){
@@ -71,6 +84,9 @@ public class Tamagotchi {
     }
     public void setEnergy(int energy){
         this.energy = energy;
+    }
+    public void setAge(int age){
+        this.age = age;
     }
 
 
