@@ -4,7 +4,7 @@ public class Dog extends Tamagotchi {
     }
 
     public void bark(){
-        System.out.println("VUFF VUFF");
+        System.out.println("Wuff Wuff");
     }
 
     @Override
